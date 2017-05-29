@@ -1,0 +1,87 @@
+In this exercise, you will complete the code lenna.f90. 
+
+1. COMPLETING THE SOURCE CODE
+
+The only section of the code you need to complete is within the do loop in
+the if branch quoted below
+
+   if (this_image() == 1) then
+      ! Collect pieces from other processes and assemble them
+      pic(1:nx_p,1:ny_p) = pic_p
+      do i = 2, num_images()
+         ! Hint: The p x q picture tiles are numbered lexicographically
+         ! 0,1,... It is convenient to calculate the row and column
+         ! indices of each tile, i.e.g
+         row = (i-1) / q
+         col = mod((i-1),q)
+         
+         ! Calculate below the global indices i1, i2, j1 and j2 in the
+         ! whole array pic(i1:i2,j1:j2) in terms row, col, i and local 
+         ! variables nx_p and ny_p.
+
+         ! You would then need something as simple as this
+         ! pic(i1:i2,j1:j2) = ... 
+         ! to assemble the tile into the whole array pic on image 1.
+         ! Hint: when you fetch the tile from image i, you will need to
+         ! reference it as pic(:,:)[i]
+
+      enddo
+      ... ...
+   endif
+
+It would always a good practice to sketch your solution on a piece of paper
+instead of typing code directly.  For a grid of p-by-q tiles, numbered
+lexicographically with i = 0,...,n=pxq-1, how would you find the global
+start and end row indices i1, i2 and column indices j1 and j2?
+
+Recall that to fetch a single variable (scalar) x from the i'th image
+(process), you will use
+
+    x[i]
+
+whilst to fetch an array a from image i, e.g. a 2D array a, you will use the
+indexed form
+
+    a(:,:)[i]
+
+You may try to use a[i] and see if you have compilation errors.
+
+2. COMPILING THE SOURCE CODE
+
+A Makefile is already provided. To compile your code, type
+
+    make
+
+An executable lenna will be generated.
+
+3. RUNNING YOUR CODE
+
+First, modify the input file 'input.dat' if necessary. Change first line
+'Lenna' if you are using a different name. Change the third line if 
+different grid of tiles are used, e.g. 4x4, then change it to
+
+   4 4
+
+Note: The code is written for assembling p-by-q tiles into one. You may try 
+different sizes of tiles. The picture of Lenna is split using ImageMagick 
+command line tool convert. The following command
+
+    convert Lenna.gif -crop 25%x25% +repage -compress none lenna_%d.pgm
+
+splits the GIF file 'Lenna.fig' into 4x4 tiles, with each tile named 
+lenna_<n>.pgm, where n is numbered lexicographically from 0 to 15. 
+See the man page of convert for details.
+
+When all set, run your code with command
+
+    mpirun -n 16 ./lenna
+
+or submit it as a jobs
+
+    sqsub -q mpi -n 16 -r 10m -o lenna.log ./lenna
+
+After it's done, you will have an assembled image 'lenna_whole.pgm'. You can
+use the following command to see the image and see if it is correct
+
+    display lenna_whole.pgm
+

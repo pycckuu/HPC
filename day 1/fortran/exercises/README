@@ -1,0 +1,9 @@
+1. Run setup
+
+    . ./setup.sh
+
+2. Sample Fortran source files can be found in the following directories
+
+    diffusion	- An example of solving 1D diffusion equation.
+    lenna	- An example of assembling pieces of the portrait of Lenna.
+    tryout	- Miscellaneous examples.
