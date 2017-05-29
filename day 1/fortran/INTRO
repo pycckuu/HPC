@@ -1,0 +1,58 @@
+DESCRIPTION
+
+This class is in response to the inquiry from research community: 
+Do you (still) support FORTRAN. While to many FORTRAN sounds like Latin, 
+with its glory in the past, an ancient, dead language today, 
+the reality is not true.
+Fortran, as the way it is spelled today, is still alive, 
+still used by many people,
+after undergoing significant modifications and improvement in the past two
+decades that are rarely seen in any other languages.
+
+Since the introduction of the Fortran 90 standard, Fortran has become 
+very different from its ancester with many new modern language features. 
+Inherited from old FORTRAN standards and enhanced by the newer ones, 
+Fortran is still the language of choice
+for scientific computing for its intrinsic support for real and complex 
+floating point operations. Its array handling, enhanced by index looping,
+makes array processing simliar or identical to its counterparts,
+such as MATLAB, hence superior to any other programming lanagues.
+The unified interface of intrinsic functions for all data types 
+makes tranlsating mathematical
+expressions to computer programmes a lot cleaner and easier.
+
+We will focus on the language features supported by the current Fortran 
+standard. In particular we will walk through the following aspects with
+examples: dynamic allocations, block access of arrays,
+derived data types and data structures, specifieable precisions, modules,
+inquiry functions, function overloading and optional arguments, etc.
+We will present the materials with easy-to-follow examples, 
+with comparison to the closest dialect MATLAB wherever applicable,
+in hope the attendees, especially those who use MATLAB, could appreciate
+the clarity, simplicity and similarity.
+
+This class is a companion to the C++ class on the same day, where you will
+find the features missing from Fortran that are more essential
+to general purpose computing than number crunching. We will show some of
+the practics of interlanguage programming, through which the shortcomings 
+of Fortran could be complemented by interfacing with C/C++.
+
+PREREQUISITES:
+
+No prior experience is required, however, knowing a programming
+language such as C or C++ would be helpful. 
+Being familiar with MATLAB will be an asset.
+The attendees are assumed to have some knowledge in numerical methods,
+as the examples presented in the class will be given in the context of
+scientific computing.
+
+
+TARGETED AUDIENCE:
+
+Senior undergraduate and graduate students and those who wish to learn
+a high level, hgih performance language that is close to mathematical
+expressions.
+
+PLAN:
+
+3 hour lecture.

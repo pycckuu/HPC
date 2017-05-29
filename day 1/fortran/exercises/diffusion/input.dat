@@ -1,0 +1,7 @@
+1.	! a - diffusive constant.
+0.0005	! dt <= 0.5*dx**2/a, where dx = (xmax-xmin)/(n-1)
+100000	! number of time steps
+50	! output frequency (every so many steps)
+-5, 5	! xmin, xmax
+101	! n,  number of points in x direction: 1-2-3-... ...-n
+0.25	! eps, for -eps <= x <= eps, f(x) = 1-|x|/eps, f(x) = 0 otherwise.

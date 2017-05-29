@@ -1,0 +1,18 @@
+$ g++-6.3.0 -std=c++14 -O3 -Wall -Wextra -Wpedantic -pthread
+$ ./move.exe
+A() 0x7fff4d688320 
+A() 0x7fff4d688321 
+A() 0x7fff4d688322 
+A(move) 0x7fff4d688323 0x7fff4d688320
+A(move) 0x7fff4d688324 0x7fff4d688321
+a=b;(copy) 0x7fff4d688320 0x7fff4d688321
+a=b;(move) 0x7fff4d688320 0x7fff4d688321
+A() 0x7fff4d688325 
+a=b;(move) 0x7fff4d688320 0x7fff4d688325
+~A() 0x7fff4d688325 
+~A() 0x7fff4d688324 
+~A() 0x7fff4d688323 
+~A() 0x7fff4d688322 
+~A() 0x7fff4d688321 
+~A() 0x7fff4d688320 
+$

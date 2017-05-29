@@ -1,0 +1,34 @@
+In this exercise, you DO NOT write code unless you want to, but watch the
+instructor demonstrating live coding. You need to, however, understand the
+numerical procedure for solving the 1D diffusion equation, explained in 
+the class.
+
+To run the code, proceed with the following. First, set the following 
+environment variables
+
+    export PGPLOT_DIR=/home/bge/lib/pgplot
+    export PGPLOT_FONT=/home/bge/lib/pgplot
+    export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$PGPLOT_DIR
+
+To compile the serial program heat.f90, type
+
+    f95 -o heat heat.f90 -L$PGPLOT_DIR -lpgplot -lX11
+
+To run a compiled program, set either of the environment variables
+
+    export PGPLOT_DEV=/xwindow
+    export PGPLOT_DEV=/xs	# To have a persistent windows
+
+Alternatively, this can be set in the source code by calling either of the
+following
+
+    call pgbeg(0, "/xwindow", 1, 1)
+    call pgbeg(0, "/xs, 1, 1)
+
+To compile the parallel program heat_p.f90, type
+
+    make
+
+To run parallel MPI program
+
+    mpirun -n num_procs ./heat_p

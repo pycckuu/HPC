@@ -1,0 +1,4 @@
+$ g++-6.3.0 -std=c++14 -O3 -Wall -Wextra -Wpedantic -pthread
+$ ./exercise-serial-defint.exe
+pi = 3.14159265358936191 (error = 0.00000000000043121)
+$

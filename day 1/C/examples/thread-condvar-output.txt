@@ -1,0 +1,6 @@
+$ g++-6.3.0 -std=c++14 -O3 -Wall -Wextra -Wpedantic -pthread
+$ ./thread-condvar.exe
+can_consume!
+can_process!
+data = 8.4
+$

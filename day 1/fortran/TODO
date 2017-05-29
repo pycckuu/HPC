@@ -1,0 +1,25 @@
+Fortran and Parallel Processing
+
+==Basiscs==
+- Intrinsics
+- Specifieable precisions
+- Language constructs
+- Dynamic allocation
+- Array slicing
+- Derived data types
+- Subroutine, functions and global variables
+- EXERCISE 1: Tryout (30 min)
+
+==Advanced Stuff==
+- Single function name for all types
+- Inquiry functions
+- Optional arguments
+- EXERCISE 2: 1D Diffusion equation (30 min)
+  - Living coding on 1D diffusion equation - cont'd (30 min - 20 min)
+  * Living coding on parallel implementation of 1D diffusion equation (30 min).
+
+==Parallel Computing wiht Coarrays==
+- EXERCISE 3: Assembling Lenna (60 min)
+
+==Highlight of Not Covered==
+

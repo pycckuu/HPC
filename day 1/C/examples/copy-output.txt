@@ -1,0 +1,8 @@
+$ g++-6.3.0 -std=c++14 -O3 -Wall -Wextra -Wpedantic -pthread
+$ ./copy.exe
+A() 0x7ffdf5d145c0 
+A(copy) 0x7ffdf5d145c1 0x7ffdf5d145c0
+a=b;(copy) 0x7ffdf5d145c0 0x7ffdf5d145c1
+~A() 0x7ffdf5d145c1 
+~A() 0x7ffdf5d145c0 
+$

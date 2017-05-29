@@ -1,0 +1,27 @@
+This folder contains the source files for the following purpose:
+
+* Array creations.
+* Math functions.
+* Inquire functions.
+* Array functions.
+* Array operations
+* Do loop containing if branch vs. mask and merge().
+
+In this exercise, you don't need to write any code. Just examine the sample
+code provided in the folder, understand what each does, compile and run 
+it to see the results. You may modify the code and try out if you wish.
+
+To compile a code foo.f90, unless otherwise indicated in the source code,
+use command
+
+    f95 foo.f90 -o foo -O2
+
+where -O2 is optional. If f95 is not available, use gfortran or ifort instead.
+
+Some examples use linear algebra libraies. Instructions are given in the
+source files.
+
+To run a compiled code, so foo, type
+
+    ./foo
+

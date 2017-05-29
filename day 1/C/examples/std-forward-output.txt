@@ -1,0 +1,14 @@
+$ g++-6.3.0 -std=c++14 -O3 -Wall -Wextra -Wpedantic -pthread
+$ ./std-forward.exe
+sp:
+Foo(0) 0x7ffd51b56bd0
+0
+~Foo() 0x7ffd51b56bd0 
+
+fp:
+Foo(2.2) 0x7ffd51b56bd0
+Foo(1.1) 0x7ffd51b56bc0
+3.3
+~Foo() 0x7ffd51b56bc0 
+~Foo() 0x7ffd51b56bd0 
+$

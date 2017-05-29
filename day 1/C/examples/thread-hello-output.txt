@@ -1,0 +1,11 @@
+$ g++-6.3.0 -std=c++14 -O3 -Wall -Wextra -Wpedantic -pthread
+$ ./thread-hello.exe
+Hello 0, id=140076424034048
+Hello 1, id=140076415641344
+Hello 2, id=140076407248640
+Hello 3, id=140076264638208
+Bye 2, id=140076407248640
+Bye 1, id=140076415641344
+Bye 3, id=140076264638208
+Bye 0, id=140076424034048
+$

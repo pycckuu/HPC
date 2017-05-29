@@ -1,0 +1,27 @@
+To run, set the following environments
+
+    export PGPLOT_DIR=/path/to/pgplot
+    export PGPLOT_FONT=/opt/pgplot/grfont.dat
+    export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$PGPLOT_DIR
+
+To compile the serial program heat.f90, type
+
+    f95 -o heat heat.f90 -L$PGPLOT_DIR -lpgplot -lX11
+
+To run a compile program, set either of the environment variables
+
+    export PGPLOT_DEV=/xwindow
+    export PGPLOT_DEV=/xs	# To have a persistent windows
+
+Aleternatively, this can be set in the source code by calling
+
+    call pgbeg(0, "/xwindow", 1, 1)
+    call pgbeg(0, "/xs, 1, 1)
+
+To compile the paralle program heat_p.f90, type
+
+    make
+
+To run parallel MPI program
+
+    mpirun -n num_procs ./heat_p
