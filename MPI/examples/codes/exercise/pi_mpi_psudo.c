@@ -1,0 +1,44 @@
+/* compute pi by approximating the area under the curve f(x) = 4 / (1 + x*x)
+ *  * between 0 and 1. */
+
+#include "mpi.h"
+#include <stdio.h>
+#include <math.h>
+
+int main(argc,argv)
+int argc;
+char *argv[];
+{
+    int done = 0, n, myid, numprocs, i;
+    double PI25DT = 3.141592653589793238462643;
+    double mypi, pi, h, sum, x;
+
+    MPI_Init(&argc,&argv);
+    MPI_Comm_size(MPI_COMM_WORLD,&numprocs);
+    MPI_Comm_rank(MPI_COMM_WORLD,&myid);
+
+    if (myid == 0) {
+       printf("This program uses %d processes\n", numprocs);
+
+       n = 100000;
+
+       printf("The number of intervals = %d \n", n);
+    }
+
+    //MPI and calculation here
+    
+
+
+
+
+
+
+
+
+    if (myid == 0)
+       printf("pi is approximately %.16f, Error is %.16f\n",
+		   pi, fabs(pi - PI25DT));
+
+    MPI_Finalize();
+    return 0;
+}

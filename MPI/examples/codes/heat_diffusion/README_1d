@@ -1,0 +1,14 @@
+# how to run ser-heat_1d.c
+icc -o ser-heat_1d ser-heat_1d.c
+
+./ser-heat_1d num_points, iteration threshold
+i.e.,
+./ser-heat_1d 100000 100000 0.0001
+
+# run mpi_heat_1d.c
+# ssh to saw, then ssh to one of saw's dev-node
+# e.g., ssh saw-dev2
+
+mpicc -o mpi_heat_1d mpi_heat_1d.c
+
+mpirun -np 4 ./mpi_heat_1d 100000 100000 0.0001
