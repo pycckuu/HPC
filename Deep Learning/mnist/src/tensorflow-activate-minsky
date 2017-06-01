@@ -1,0 +1,27 @@
+TENSORFLOW_BIN="/opt/DL/tensorflow/bin"
+TENSORFLOW_PYTHON="/opt/DL/tensorflow/lib/python2.7/site-packages"
+CUDA80_LIB="/usr/local/cuda-8.0/lib64"
+CUDA_CUPTI_LIB="/usr/local/cuda-8.0/extras/CUPTI/lib64"
+
+if ! echo $PATH | /bin/grep -q $TENSORFLOW_BIN
+then
+    PATH=$PATH${PATH:+:}$TENSORFLOW_BIN
+fi
+
+if ! echo $PYTHONPATH | /bin/grep -q $TENSORFLOW_PYTHON
+then
+    PYTHONPATH=$PYTHONPATH${PYTHONPATH:+:}$TENSORFLOW_PYTHON
+fi
+
+if ! echo $LD_LIBRARY_PATH | /bin/grep -q $CUDA80_LIB
+then
+    LD_LIBRARY_PATH=$LD_LIBRARY_PATH${LD_LIBRARY_PATH:+:}$CUDA80_LIB
+fi
+
+if ! echo $LD_LIBRARY_PATH | /bin/grep -q $CUDA_CUPTI_LIB
+then
+    LD_LIBRARY_PATH=$LD_LIBRARY_PATH${LD_LIBRARY_PATH:+:}$CUDA_CUPTI_LIB
+fi
+
+
+export PATH PYTHONPATH LD_LIBRARY_PATH

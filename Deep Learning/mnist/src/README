@@ -1,0 +1,16 @@
+On minsky:
+=========
+
+source tensorflow-activate-minsky
+nvidia-smi to see what GPUs are idle
+CUDA_VISIBLE_DEVICES=3 python abc.py to run the program on GPU#3
+
+On copper:
+=========
+
+source tensorflow-activate-copper
+sqsub -q gpu -f threaded -n 2 --gpp=1 --mpp=5g -r 20m -o abcd python tf_mnist_3layers_mse.py
+
+Display structure of NN
+tensorboard --logdir <log-directory> to generate graph, which can be viewed on web browser.
+
