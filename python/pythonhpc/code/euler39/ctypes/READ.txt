@@ -1,0 +1,5 @@
+compile library with
+
+gcc -shared  -o testlib.so testlib.c
+
+
